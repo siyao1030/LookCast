@@ -11,7 +11,7 @@
 @implementation Weather
 
 // Current Weather in current location
-+ (void) currentWeather
++ (NSMutableDictionary *) currentWeather
 {
     //NSString *zipCode = @"91711";
     NSString *requestURL = @"http://api.wunderground.com/api/b02d00370341149d/conditions/q/CA/San_Francisco.json";
@@ -32,10 +32,16 @@
     //Icon name, somethinglike partlycloudy
     NSString *icon = result[@"current_observation"][@"icon"];
     
-    return;
+    NSMutableDictionary *weather = [NSMutableDictionary dictionary];
+    weather[@"temp_f"] = temp_f;
+    weather[@"relative_humidity"] = relative_humidity;
+    weather[@"precipitation"] = precipitation;
+    weather[@"icon"] = icon;
+    
+    return weather;
 }
 
-+ (void) weatherAtLatitude:(float)latitude longitude:(float)longitude
++ (NSMutableDictionary *) weatherAtLatitude:(float)latitude longitude:(float)longitude
 {
 
     
@@ -53,21 +59,13 @@
     NSString *temp_f = current_observation[@"temp_f"];
     NSString *precip_today_in = current_observation[@"precip_today_in"];
     
-    //
+    NSMutableDictionary *weather = [NSMutableDictionary dictionary];
+    weather[@"city"] = city;
+    weather[@"state"] = state;
+    weather[@"temp_f"] = temp_f;
+    weather[@"precip_today_in"] = precip_today_in;
     
-//    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
-//    
-//    [NSURLConnection sendAsynchronousRequest:urlRequest queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
-//    {
-//        if ([data length] > 0 && error == nil)
-//            [delegate receivedData:data];
-//        else if ([data length] == 0 && error == nil)
-//            [delegate emptyReply];
-//        else if (error != nil && error.code == ERROR_CODE_TIMEOUT)
-//            [delegate timedOut];
-//        else if (error != nil)
-//            [delegate downloadError:error];
-//    }];
+    return weather;
 }
 
 @end

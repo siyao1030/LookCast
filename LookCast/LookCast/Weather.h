@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 @interface Weather : NSObject
-+ (void) currentWeather;
-+ (void) weatherAtLatitude:(float)latitude longitude:(float)longitude;
++ (NSMutableDictionary *) currentWeather;
++ (NSMutableDictionary *) weatherAtLatitude:(float)latitude longitude:(float)longitude;
 @end
