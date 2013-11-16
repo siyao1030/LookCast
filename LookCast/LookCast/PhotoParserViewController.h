@@ -14,5 +14,5 @@
 
 @property ALAssetsLibrary *library;
 @property NSMutableArray *photoItems;
--(NSMutableArray *) getPhotos;
+-(void) getPhotos;
 @end
