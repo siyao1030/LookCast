@@ -15,6 +15,7 @@
 		203BC8B81837669600B55D48 /* Weather_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 203BC8B71837669600B55D48 /* Weather_Tests.m */; };
 		203BC91018378A2B00B55D48 /* PhotoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 203BC90D18378A2B00B55D48 /* PhotoItem.m */; };
 		203BC91118378A2B00B55D48 /* PhotoParserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 203BC90F18378A2B00B55D48 /* PhotoParserViewController.m */; };
+		204AF73618379EA000E853C1 /* forecast.json in Resources */ = {isa = PBXBuildFile; fileRef = 204AF73518379EA000E853C1 /* forecast.json */; };
 		20582FEF1837351C00970942 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 20582FEE1837351C00970942 /* Weather.m */; };
 		20583020183745EB00970942 /* conditions.json in Resources */ = {isa = PBXBuildFile; fileRef = 2058301F183745EB00970942 /* conditions.json */; };
 		205830241837513300970942 /* TestWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 205830221837513300970942 /* TestWeatherViewController.m */; };
@@ -51,6 +52,7 @@
 		203BC90D18378A2B00B55D48 /* PhotoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoItem.m; sourceTree = "<group>"; };
 		203BC90E18378A2B00B55D48 /* PhotoParserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoParserViewController.h; sourceTree = "<group>"; };
 		203BC90F18378A2B00B55D48 /* PhotoParserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoParserViewController.m; sourceTree = "<group>"; };
+		204AF73518379EA000E853C1 /* forecast.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = forecast.json; sourceTree = SOURCE_ROOT; };
 		20582FED1837351C00970942 /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
 		20582FEE1837351C00970942 /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
 		2058301F183745EB00970942 /* conditions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = conditions.json; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 		2058301E183745D800970942 /* Weather API Example Outputs */ = {
 			isa = PBXGroup;
 			children = (
+				204AF73518379EA000E853C1 /* forecast.json */,
 				203BC88F18375CC200B55D48 /* history.json */,
 				2058301F183745EB00970942 /* conditions.json */,
 			);
@@ -275,6 +278,7 @@
 			files = (
 				D1F2F0511837281800ADC893 /* InfoPlist.strings in Resources */,
 				205830251837513300970942 /* TestWeatherViewController.xib in Resources */,
+				204AF73618379EA000E853C1 /* forecast.json in Resources */,
 				203BC89018375CC200B55D48 /* history.json in Resources */,
 				D1F2F05C1837281800ADC893 /* Images.xcassets in Resources */,
 				20583020183745EB00970942 /* conditions.json in Resources */,

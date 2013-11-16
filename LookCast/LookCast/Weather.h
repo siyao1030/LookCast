@@ -17,6 +17,6 @@
 
 - (NSMutableDictionary *) currentWeather;
 - (NSMutableDictionary *) weatherAtLatitude:(float)latitude longitude:(float)longitude;
-+ (void)updateWeatherData;
++ (NSDictionary *)updateWeatherData
 + (NSMutableArray *)addWeatherDataToPhotoItems;
 @end

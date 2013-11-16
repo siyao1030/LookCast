@@ -68,29 +68,39 @@
     }
     weather[@"icon"] = icon;
     
+    NSString *requestForecastURL = [NSString stringWithFormat:@"http://api.wunderground.com/api/b02d00370341149d/forecast/q/%3.4f,%3.4f.json", latitude, longitude];
+    request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:requestForecastURL]];
+    response = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:nil];
+    result = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:nil];
+    NSString *high = result[@"forecast"][@"simpleforecast"][@"forecastday"][0][@"high"][@"fahrenheit"];
+    NSString *low = result[@"forecast"][@"simpleforecast"][@"forecastday"][0][@"low"][@"fahrenheit"];
+    weather[@"high"] = high;
+    weather[@"low"] = low;
+    
     return weather;
 }
 
-+ (void)updateWeatherData
++ (NSDictionary *)updateWeatherData
 {
     //Claremont
     float temp_lat = 34.1223;
     float temp_long = -117.7143;
     CLLocation *location = [[CLLocation alloc] initWithLatitude:temp_lat longitude:temp_long];
-    NSDate *date = [NSDate date];
-    NSDictionary *weather = [self weatherForLocation:location date:date];
+    NSDictionary *weather = [self weatherForLocation:location];
+    
+    return weather;
 }
 
 + (NSMutableArray *)addWeatherDataToPhotoItems
 {
     PhotoParserViewController *vc = [[PhotoParserViewController alloc] init];
-    [vc getPhotos];
+    NSMutableArray *photoItems = [vc getPhotos];
     
-    for (PhotoItem *photoItem in vc.photoItems) {
+    for (PhotoItem *photoItem in photoItems) {
         NSMutableDictionary *weather = [self weatherForLocation:photoItem.location date:photoItem.date];
         [photoItem setHigh:weather[@"maxtempi"] andLow:weather[@"mintempi"] andRain:weather[@"rain"]];
     }
     
-    return vc.photoItems;
+    return photoItems;
 }
 @end

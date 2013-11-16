@@ -38,45 +38,49 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void) getPhotos {
-    self.library = [[ALAssetsLibrary alloc] init];
-    
-    self.photoItems = [[NSMutableArray alloc] init];
-    
-    [self.library enumerateGroupsWithTypes:ALAssetsGroupSavedPhotos
-                                usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
-                                    [group enumerateAssetsUsingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
-                                        if (result)
-                                        {
-                                            if ([self isValidPhoto:result]) {
-                                                NSURL *photoURL = [result valueForProperty:ALAssetPropertyAssetURL];
-                                                CLLocation *photoLocation = [result valueForProperty:ALAssetPropertyLocation];
-                                                NSDate *photoDate = [result valueForProperty:ALAssetPropertyDate];
-//                                                NSLog(@"photo url %@", photoURL);
-//                                                NSLog(@"photo location %@", photoLocation);
-//                                                NSLog(@"photo date %@", photoDate);
+//-(NSMutableArray *) getPhotos {
+//    self.library = [[ALAssetsLibrary alloc] init];
+//    
+//    void (^assetEnumerator)(ALAsset *, NSUInteger, BOOL *) = ^(ALAsset *asset, NSUInteger index, BOOL *stop) {
+//        if(asset != NULL) {
+//            [assets addObject:asset];
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                [self insertArray];
+//            });
+//        }
+//    };
+//    NSMutableArray *photoItems = [[NSMutableArray alloc] init];
+//    
+//    void (^enumerationBlock)(ALAssetsGroup *, BOOL *) = ^(ALAssetsGroup *group, BOOL *stop){
+//        if(group != nil) {
+//            [group enumerateAssetsUsingBlock:assetEnumerator];
+//        }
+//    }
+//    
+//    [self.library enumerateGroupsWithTypes:ALAssetsGroupAll
+//                                usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
+//                                    [group enumerateAssetsUsingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
+//                                        if (result)
+//                                        {
+//                                            if ([self isValidPhoto:result]) {
+//                                                NSURL *photoURL = [result valueForProperty:ALAssetPropertyAssetURL];
+//                                                CLLocation *photoLocation = [result valueForProperty:ALAssetPropertyLocation];
+//                                                NSDate *photoDate = [result valueForProperty:ALAssetPropertyDate];
+//
+//                                                PhotoItem *temp = [[PhotoItem alloc] initWithUrl:photoURL andLocation:photoLocation andDate:photoDate];
 //                                                
-                                                
-//                                                NSData *urlData = [NSKeyedArchiver archivedDataWithRootObject:photoURL];
-//                                                NSData *locationData = [NSKeyedArchiver archivedDataWithRootObject:photoLocation];
-//                                                NSData *dateData = [NSKeyedArchiver archivedDataWithRootObject:photoDate];
-//                                         
-//                                                NSDictionary *dataDictionary = @{ @"url" : urlData , @"location" : locationData, @"date" : dateData, @"high" : @"", @"low" : @"", @"rain" : @0 };
-                                                
-                                                //[LCDatabase saveLCItemWithData:dataDictionary];
-
-                                                PhotoItem *temp = [[PhotoItem alloc] initWithUrl:photoURL andLocation:photoLocation andDate:photoDate];
-                                                
-                                                [self.photoItems addObject:temp];
-                                            }
-                                        }
-                                    }
-                                     ];
-                                } failureBlock:^(NSError *error) {
-                                    NSLog(@"Error: %@", error);
-                                }
-     ];
-}
+//                                                [photoItems addObject:temp];
+//                                            }
+//                                        }
+//                                    }
+//                                     ];
+//                                } failureBlock:^(NSError *error) {
+//                                    NSLog(@"Error: %@", error);
+//                                }
+//     ];
+//    
+//    return photoItems;
+//}
 
 -(BOOL) isValidPhoto:(ALAsset *)photo {
     if ([self isJPEG:photo] && [self hasFaces:photo]) {
