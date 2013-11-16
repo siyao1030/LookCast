@@ -12,7 +12,6 @@
 @interface PhotoParserViewController : UIViewController
 
 @property ALAssetsLibrary *library;
-@property NSDictionary *photosMetadata;
-@property UIImageView *photoView; //
+@property NSMutableArray *photos;
 
 @end

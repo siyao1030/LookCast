@@ -28,12 +28,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.photosMetadata = [[NSDictionary alloc] init];
     [self getPhotos];
     
-    self.photoView = [[UIImageView alloc] initWithFrame:CGRectMake(50,50,200,200)]; //
-    [self.view addSubview:self.photoView]; //
-
 	// Do any additional setup after loading the view.
 }
 
@@ -46,23 +42,30 @@
 -(void) getPhotos {
     self.library = [[ALAssetsLibrary alloc] init];
     
+    self.photos = [[NSMutableArray alloc] init];
+    
     [self.library enumerateGroupsWithTypes:ALAssetsGroupSavedPhotos
                                 usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
                                     [group enumerateAssetsUsingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
                                         if (result)
                                         {
                                             if ([self isValidPhoto:result]) {
+                                                NSURL *photoURL = [result valueForProperty:ALAssetPropertyAssetURL];
                                                 CLLocation *photoLocation = [result valueForProperty:ALAssetPropertyLocation];
                                                 NSDate *photoDate = [result valueForProperty:ALAssetPropertyDate];
                                                 
-                                                NSURL *photoURL = [result valueForProperty:ALAssetPropertyAssetURL];
 
-                                                NSDictionary *photoMetadata = [NSDictionary dictionaryWithObjectsAndKeys:@"location", photoLocation, @"data", photoDate, nil];
+//                                                NSData *urlData = [NSKeyedArchiver archivedDataWithRootObject:photoURL];
+//                                                NSData *locationData = [NSKeyedArchiver archivedDataWithRootObject:photoLocation];
+//                                                NSData *dateData = [NSKeyedArchiver archivedDataWithRootObject:photoDate];
+//                                         
+//                                                NSDictionary *dataDictionary = @{ @"url" : urlData , @"location" : locationData, @"date" : dateData, @"high" : @"", @"low" : @"", @"rain" : @0 };
                                                 
-                                                
-                                                NSLog(@"taken at location %@", photoLocation);
-                                                NSLog(@"taken on date %@", photoDate);
-                                                NSLog(@"at url %@", photoURL);
+                                                //[LCDatabase saveLCItemWithData:dataDictionary];
+
+                                                NSDictionary *photoInformation = @{ @"url" : photoURL , @"location" : photoLocation, @"date" : photoDate};
+                                                [self.photos addObject:photoInformation];
+                                                NSLog(@"photos %@", self.photos);
                                             }
                                         }
                                     }
@@ -128,10 +131,6 @@
     CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeFace context:nil options:detectorOptions];
     
     NSArray *features = [detector featuresInImage:ciImage options:featureOptions];
-    
-    NSString *photoName = [photo valueForProperty:ALAssetPropertyAssetURL];
-    
-   // NSLog(@"photo %@ has %lu features", photoName, (unsigned long)[features count]);
     
     if([features count] > 0){
         return YES;
