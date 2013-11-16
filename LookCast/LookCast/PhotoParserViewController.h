@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <AssetsLibrary/AssetsLibrary.h>
+#import "PhotoItem.h"
 
 @interface PhotoParserViewController : UIViewController
 
 @property ALAssetsLibrary *library;
-@property NSMutableArray *photos;
+@property NSMutableArray *photoItems;
 
 @end

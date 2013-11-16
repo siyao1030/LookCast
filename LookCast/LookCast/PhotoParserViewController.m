@@ -29,7 +29,6 @@
 {
     [super viewDidLoad];
     [self getPhotos];
-    
 	// Do any additional setup after loading the view.
 }
 
@@ -42,7 +41,7 @@
 -(void) getPhotos {
     self.library = [[ALAssetsLibrary alloc] init];
     
-    self.photos = [[NSMutableArray alloc] init];
+    self.photoItems = [[NSMutableArray alloc] init];
     
     [self.library enumerateGroupsWithTypes:ALAssetsGroupSavedPhotos
                                 usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
@@ -53,8 +52,11 @@
                                                 NSURL *photoURL = [result valueForProperty:ALAssetPropertyAssetURL];
                                                 CLLocation *photoLocation = [result valueForProperty:ALAssetPropertyLocation];
                                                 NSDate *photoDate = [result valueForProperty:ALAssetPropertyDate];
+//                                                NSLog(@"photo url %@", photoURL);
+//                                                NSLog(@"photo location %@", photoLocation);
+//                                                NSLog(@"photo date %@", photoDate);
+//                                                
                                                 
-
 //                                                NSData *urlData = [NSKeyedArchiver archivedDataWithRootObject:photoURL];
 //                                                NSData *locationData = [NSKeyedArchiver archivedDataWithRootObject:photoLocation];
 //                                                NSData *dateData = [NSKeyedArchiver archivedDataWithRootObject:photoDate];
@@ -63,9 +65,9 @@
                                                 
                                                 //[LCDatabase saveLCItemWithData:dataDictionary];
 
-                                                NSDictionary *photoInformation = @{ @"url" : photoURL , @"location" : photoLocation, @"date" : photoDate};
-                                                [self.photos addObject:photoInformation];
-                                                NSLog(@"photos %@", self.photos);
+                                                PhotoItem *temp = [[PhotoItem alloc] initWithUrl:photoURL andLocation:photoLocation andDate:photoDate];
+                                                
+                                                [self.photoItems addObject:temp];
                                             }
                                         }
                                     }
@@ -74,7 +76,6 @@
                                     NSLog(@"Error: %@", error);
                                 }
      ];
-    
 }
 
 -(BOOL) isValidPhoto:(ALAsset *)photo {
