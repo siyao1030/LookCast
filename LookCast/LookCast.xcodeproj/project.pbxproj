@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D1578F441837816D00BB0F7A /* EKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1578F3E1837816D00BB0F7A /* EKAppDelegate.m */; };
+		D1578F451837816D00BB0F7A /* EKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1578F401837816D00BB0F7A /* EKViewController.m */; };
+		D1578F461837816D00BB0F7A /* EKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1578F411837816D00BB0F7A /* EKViewController.xib */; };
+		D1578F471837816D00BB0F7A /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D1578F431837816D00BB0F7A /* MyCell.m */; };
+		D1578F4B1837833800BB0F7A /* EKStreamView.m in Sources */ = {isa = PBXBuildFile; fileRef = D1578F4A1837833800BB0F7A /* EKStreamView.m */; };
+		D1578F4E1837877D00BB0F7A /* MainCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1578F4D1837877D00BB0F7A /* MainCollectionViewController.m */; };
 		D1F2F0451837281800ADC893 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F2F0441837281800ADC893 /* Foundation.framework */; };
 		D1F2F0471837281800ADC893 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F2F0461837281800ADC893 /* CoreGraphics.framework */; };
 		D1F2F0491837281800ADC893 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F2F0481837281800ADC893 /* UIKit.framework */; };
@@ -22,6 +28,19 @@
 		D1F2F0661837281800ADC893 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F2F04A1837281800ADC893 /* CoreData.framework */; };
 		D1F2F06E1837281800ADC893 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D1F2F06C1837281800ADC893 /* InfoPlist.strings */; };
 		D1F2F0701837281800ADC893 /* LookCastTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F2F06F1837281800ADC893 /* LookCastTests.m */; };
+		D1F2F07B1837316300ADC893 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F2F07A1837316300ADC893 /* MainViewController.m */; };
+		D1F2F081183733F700ADC893 /* NHBalancedFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F2F07E183733F700ADC893 /* NHBalancedFlowLayout.m */; };
+		D1F2F082183733F700ADC893 /* NHLinearPartition.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F2F080183733F700ADC893 /* NHLinearPartition.m */; };
+		D1F2F0861837350900ADC893 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F2F0841837350900ADC893 /* TestViewController.m */; };
+		D1F2F0871837350900ADC893 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1F2F0851837350900ADC893 /* TestViewController.xib */; };
+		D1F2F08A18373A2B00ADC893 /* WeatherView.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F2F08918373A2B00ADC893 /* WeatherView.m */; };
+		D1F2F08E1837527F00ADC893 /* partlycloudy.png in Resources */ = {isa = PBXBuildFile; fileRef = D1F2F08D1837527F00ADC893 /* partlycloudy.png */; };
+		D1F2F0931837657200ADC893 /* ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F2F0901837657200ADC893 /* ImageCell.m */; };
+		D1F2F0941837657200ADC893 /* UIImage+Decompression.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F2F0921837657200ADC893 /* UIImage+Decompression.m */; };
+		D1F2F0971837663E00ADC893 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D1F2F0951837663E00ADC893 /* 2.jpg */; };
+		D1F2F0981837663E00ADC893 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D1F2F0961837663E00ADC893 /* 1.jpg */; };
+		D1F2F09A1837745F00ADC893 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1F2F0991837745F00ADC893 /* Main.storyboard */; };
+		D1F2F09C1837757C00ADC893 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1F2F09B1837757C00ADC893 /* Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +54,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D1578F3D1837816D00BB0F7A /* EKAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKAppDelegate.h; sourceTree = "<group>"; };
+		D1578F3E1837816D00BB0F7A /* EKAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKAppDelegate.m; sourceTree = "<group>"; };
+		D1578F3F1837816D00BB0F7A /* EKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKViewController.h; sourceTree = "<group>"; };
+		D1578F401837816D00BB0F7A /* EKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKViewController.m; sourceTree = "<group>"; };
+		D1578F411837816D00BB0F7A /* EKViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EKViewController.xib; sourceTree = "<group>"; };
+		D1578F421837816D00BB0F7A /* MyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCell.h; sourceTree = "<group>"; };
+		D1578F431837816D00BB0F7A /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCell.m; sourceTree = "<group>"; };
+		D1578F491837833800BB0F7A /* EKStreamView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKStreamView.h; sourceTree = "<group>"; };
+		D1578F4A1837833800BB0F7A /* EKStreamView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKStreamView.m; sourceTree = "<group>"; };
+		D1578F4C1837877D00BB0F7A /* MainCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCollectionViewController.h; sourceTree = "<group>"; };
+		D1578F4D1837877D00BB0F7A /* MainCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCollectionViewController.m; sourceTree = "<group>"; };
 		D1F2F0411837281800ADC893 /* LookCast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LookCast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1F2F0441837281800ADC893 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D1F2F0461837281800ADC893 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +83,26 @@
 		D1F2F06B1837281800ADC893 /* LookCastTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LookCastTests-Info.plist"; sourceTree = "<group>"; };
 		D1F2F06D1837281800ADC893 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D1F2F06F1837281800ADC893 /* LookCastTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LookCastTests.m; sourceTree = "<group>"; };
+		D1F2F0791837316300ADC893 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		D1F2F07A1837316300ADC893 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		D1F2F07D183733F700ADC893 /* NHBalancedFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHBalancedFlowLayout.h; sourceTree = "<group>"; };
+		D1F2F07E183733F700ADC893 /* NHBalancedFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHBalancedFlowLayout.m; sourceTree = "<group>"; };
+		D1F2F07F183733F700ADC893 /* NHLinearPartition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHLinearPartition.h; sourceTree = "<group>"; };
+		D1F2F080183733F700ADC893 /* NHLinearPartition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHLinearPartition.m; sourceTree = "<group>"; };
+		D1F2F0831837350900ADC893 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestViewController.h; path = LookCast/TestViewController.h; sourceTree = SOURCE_ROOT; };
+		D1F2F0841837350900ADC893 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestViewController.m; path = LookCast/TestViewController.m; sourceTree = SOURCE_ROOT; };
+		D1F2F0851837350900ADC893 /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TestViewController.xib; path = LookCast/TestViewController.xib; sourceTree = SOURCE_ROOT; };
+		D1F2F08818373A2B00ADC893 /* WeatherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherView.h; sourceTree = "<group>"; };
+		D1F2F08918373A2B00ADC893 /* WeatherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherView.m; sourceTree = "<group>"; };
+		D1F2F08D1837527F00ADC893 /* partlycloudy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = partlycloudy.png; sourceTree = "<group>"; };
+		D1F2F08F1837657200ADC893 /* ImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageCell.h; path = ../ImageCell.h; sourceTree = "<group>"; };
+		D1F2F0901837657200ADC893 /* ImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageCell.m; path = ../ImageCell.m; sourceTree = "<group>"; };
+		D1F2F0911837657200ADC893 /* UIImage+Decompression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Decompression.h"; path = "../UIImage+Decompression.h"; sourceTree = "<group>"; };
+		D1F2F0921837657200ADC893 /* UIImage+Decompression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Decompression.m"; path = "../UIImage+Decompression.m"; sourceTree = "<group>"; };
+		D1F2F0951837663E00ADC893 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		D1F2F0961837663E00ADC893 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		D1F2F0991837745F00ADC893 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D1F2F09B1837757C00ADC893 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +131,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D1578F481837819400BB0F7A /* streamview */ = {
+			isa = PBXGroup;
+			children = (
+				D1578F3D1837816D00BB0F7A /* EKAppDelegate.h */,
+				D1578F3E1837816D00BB0F7A /* EKAppDelegate.m */,
+				D1578F491837833800BB0F7A /* EKStreamView.h */,
+				D1578F4A1837833800BB0F7A /* EKStreamView.m */,
+				D1578F3F1837816D00BB0F7A /* EKViewController.h */,
+				D1578F401837816D00BB0F7A /* EKViewController.m */,
+				D1578F411837816D00BB0F7A /* EKViewController.xib */,
+				D1578F421837816D00BB0F7A /* MyCell.h */,
+				D1578F431837816D00BB0F7A /* MyCell.m */,
+			);
+			name = streamview;
+			sourceTree = "<group>";
+		};
 		D1F2F0381837281800ADC893 = {
 			isa = PBXGroup;
 			children = (
@@ -115,9 +181,22 @@
 		D1F2F04C1837281800ADC893 /* LookCast */ = {
 			isa = PBXGroup;
 			children = (
+				D1578F4C1837877D00BB0F7A /* MainCollectionViewController.h */,
+				D1578F4D1837877D00BB0F7A /* MainCollectionViewController.m */,
+				D1F2F07C183733F700ADC893 /* NHBalancedFlowLayout */,
 				D1F2F0551837281800ADC893 /* AppDelegate.h */,
 				D1F2F0561837281800ADC893 /* AppDelegate.m */,
+				D1F2F08818373A2B00ADC893 /* WeatherView.h */,
+				D1F2F08918373A2B00ADC893 /* WeatherView.m */,
+				D1F2F08D1837527F00ADC893 /* partlycloudy.png */,
 				D1F2F05B1837281800ADC893 /* Images.xcassets */,
+				D1F2F0791837316300ADC893 /* MainViewController.h */,
+				D1F2F07A1837316300ADC893 /* MainViewController.m */,
+				D1F2F0991837745F00ADC893 /* Main.storyboard */,
+				D1578F481837819400BB0F7A /* streamview */,
+				D1F2F09B1837757C00ADC893 /* Storyboard.storyboard */,
+				D1F2F0951837663E00ADC893 /* 2.jpg */,
+				D1F2F0961837663E00ADC893 /* 1.jpg */,
 				D1F2F0581837281800ADC893 /* LookCast.xcdatamodeld */,
 				D1F2F04D1837281800ADC893 /* Supporting Files */,
 			);
@@ -151,6 +230,24 @@
 				D1F2F06C1837281800ADC893 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D1F2F07C183733F700ADC893 /* NHBalancedFlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				D1F2F08F1837657200ADC893 /* ImageCell.h */,
+				D1F2F0901837657200ADC893 /* ImageCell.m */,
+				D1F2F0911837657200ADC893 /* UIImage+Decompression.h */,
+				D1F2F0921837657200ADC893 /* UIImage+Decompression.m */,
+				D1F2F07D183733F700ADC893 /* NHBalancedFlowLayout.h */,
+				D1F2F07E183733F700ADC893 /* NHBalancedFlowLayout.m */,
+				D1F2F07F183733F700ADC893 /* NHLinearPartition.h */,
+				D1F2F080183733F700ADC893 /* NHLinearPartition.m */,
+				D1F2F0831837350900ADC893 /* TestViewController.h */,
+				D1F2F0841837350900ADC893 /* TestViewController.m */,
+				D1F2F0851837350900ADC893 /* TestViewController.xib */,
+			);
+			path = NHBalancedFlowLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,8 +325,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1F2F09A1837745F00ADC893 /* Main.storyboard in Resources */,
+				D1F2F0971837663E00ADC893 /* 2.jpg in Resources */,
 				D1F2F0511837281800ADC893 /* InfoPlist.strings in Resources */,
+				D1578F461837816D00BB0F7A /* EKViewController.xib in Resources */,
+				D1F2F0871837350900ADC893 /* TestViewController.xib in Resources */,
 				D1F2F05C1837281800ADC893 /* Images.xcassets in Resources */,
+				D1F2F09C1837757C00ADC893 /* Storyboard.storyboard in Resources */,
+				D1F2F08E1837527F00ADC893 /* partlycloudy.png in Resources */,
+				D1F2F0981837663E00ADC893 /* 1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,9 +352,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1578F451837816D00BB0F7A /* EKViewController.m in Sources */,
 				D1F2F0571837281800ADC893 /* AppDelegate.m in Sources */,
 				D1F2F0531837281800ADC893 /* main.m in Sources */,
+				D1F2F0861837350900ADC893 /* TestViewController.m in Sources */,
+				D1F2F08A18373A2B00ADC893 /* WeatherView.m in Sources */,
+				D1578F4E1837877D00BB0F7A /* MainCollectionViewController.m in Sources */,
+				D1578F471837816D00BB0F7A /* MyCell.m in Sources */,
+				D1578F4B1837833800BB0F7A /* EKStreamView.m in Sources */,
 				D1F2F05A1837281800ADC893 /* LookCast.xcdatamodeld in Sources */,
+				D1578F441837816D00BB0F7A /* EKAppDelegate.m in Sources */,
+				D1F2F081183733F700ADC893 /* NHBalancedFlowLayout.m in Sources */,
+				D1F2F07B1837316300ADC893 /* MainViewController.m in Sources */,
+				D1F2F0941837657200ADC893 /* UIImage+Decompression.m in Sources */,
+				D1F2F0931837657200ADC893 /* ImageCell.m in Sources */,
+				D1F2F082183733F700ADC893 /* NHLinearPartition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +567,7 @@
 				D1F2F0751837281800ADC893 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D1F2F0761837281800ADC893 /* Build configuration list for PBXNativeTarget "LookCastTests" */ = {
 			isa = XCConfigurationList;
@@ -459,6 +576,7 @@
 				D1F2F0781837281800ADC893 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "MainViewController.h"
+#import "NHBalancedFlowLayout.h"
+#import "EKViewController.h"
+#import "MainCollectionViewController.h"
 
 @implementation AppDelegate
 
@@ -19,6 +23,15 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    //MainViewController * mainView = [[MainViewController alloc]initWithNibName:Nil bundle:Nil];
+    //UICollectionViewLayout * layout = [[NHBalancedFlowLayout alloc]init];
+    //MainViewController * mainView = [[MainViewController alloc]initWithCollectionViewLayout:layout];
+    //[mainView setup];
+    
+    //EKViewController * mainView= [[EKViewController alloc] initWithNibName:@"EKViewController" bundle:nil];
+    
+    MainCollectionViewController *mainView =[[MainCollectionViewController alloc]init];
+    [self.window setRootViewController:mainView];
     [self.window makeKeyAndVisible];
     return YES;
 }
