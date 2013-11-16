@@ -19,25 +19,60 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        NSMutableArray *images = [[NSMutableArray alloc] init];
+        self.imageURLs = [[NSMutableArray alloc] init];
+        self.images = [[NSMutableArray alloc] init];
+        
         for (int i = 1; i <= 10; i++) {
-            [images addObject:[UIImage imageNamed:@"1.jpg"]];
-            [images addObject:[UIImage imageNamed:@"2.jpg"]];
+            [self.images addObject:[UIImage imageNamed:@"1.jpg"]];
+            [self.images addObject:[UIImage imageNamed:@"2.jpg"]];
         }
-        self.images = [images copy];
+        
+        NSMutableArray *relevantPhotoItems = [Weather addWeatherDataToPhotoItems];
+        for (PhotoItem * photoItem in relevantPhotoItems)
+        {
+            [self.imageURLs addObject:photoItem.url];
+        }
         
     }
     return self;
 }
 
--(void)loadImage:(NSMutableArray *) dict
-{
-    
-}
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.images.count;
+    return self.imageURLs.count;
 }
+
+/*
+-(UIImage *)findLargeImage(NSURL *)url
+{
+    //NSString *mediaurl = [self.node valueForKey:kVMMediaURL];
+    
+    //
+    ALAssetsLibraryAssetForURLResultBlock resultblock = ^(ALAsset *myasset)
+    {
+        ALAssetRepresentation *rep = [myasset defaultRepresentation];
+        CGImageRef iref = [rep fullResolutionImage];
+        if (iref) {
+            largeimage = [UIImage imageWithCGImage:iref];
+        }
+    };
+    
+    //
+    ALAssetsLibraryAccessFailureBlock failureblock  = ^(NSError *myerror)
+    {
+        NSLog(@"booya, cant get image - %@",[myerror localizedDescription]);
+    };
+    
+    //if(mediaurl && [mediaurl length] && ![[mediaurl pathExtension] isEqualToString:AUDIO_EXTENSION])
+    //{
+        //[largeimage release];
+        //NSURL *asseturl = [NSURL URLWithString:mediaurl];
+        ALAssetsLibrary* assetslibrary = [[ALAssetsLibrary alloc] init];
+        [assetslibrary assetForURL:url
+                       resultBlock:resultblock
+                      failureBlock:failureblock];
+    //}
+}*/
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *identifier = @"Cell";
@@ -53,6 +88,22 @@
     }
     
     // Configure the cell...
+    
+    ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+    [library assetForURL:[self.images objectAtIndex:indexPath.row] resultBlock:^(ALAsset *asset)
+     {
+         UIImage  *copyOfOriginalImage = [UIImage imageWithCGImage:[[asset defaultRepresentation] fullScreenImage] scale:0.5 orientation:UIImageOrientationUp];
+         
+         //cell.backgroundView = [[UIImageView alloc] initWithImage:copyOfOriginalImage];
+         
+     }
+            failureBlock:^(NSError *error)
+     {
+         // error handling
+         NSLog(@"failure-----");
+     }];
+    
+    
     UIImage *image =[self.images objectAtIndex:indexPath.row];
     CGSize newSize = CGSizeMake(100.0f, 100.0f);
     UIGraphicsBeginImageContext(newSize);
@@ -64,7 +115,8 @@
     view.contentMode = UIViewContentModeScaleAspectFit;
     //UIImageView *temp = [self.imageViews objectAtIndex:indexPath.row];
     //[cell setFrame:CGRectMake(0, 0, 95, 95)];
-    [cell addSubview:view];
+    cell.backgroundView = view;
+    //[cell addSubview:view];
     
     
     return cell;
