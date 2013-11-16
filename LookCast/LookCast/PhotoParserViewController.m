@@ -38,10 +38,10 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void) getPhotos {
+-(NSMutableArray *) getPhotos {
     self.library = [[ALAssetsLibrary alloc] init];
     
-    self.photoItems = [[NSMutableArray alloc] init];
+    NSMutableArray *photoItems = [[NSMutableArray alloc] init];
     
     [self.library enumerateGroupsWithTypes:ALAssetsGroupSavedPhotos
                                 usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
@@ -66,8 +66,9 @@
                                                 //[LCDatabase saveLCItemWithData:dataDictionary];
 
                                                 PhotoItem *temp = [[PhotoItem alloc] initWithUrl:photoURL andLocation:photoLocation andDate:photoDate];
-                                                
-                                                [self.photoItems addObject:temp];
+                                                NSMutableDictionary *weather = [Weather weatherForLocation:temp.location date:temp.date];
+                                                [temp setHigh:weather[@"maxtempi"] andLow:weather[@"mintempi"] andRain:weather[@"rain"]];
+                                                [photoItems addObject:temp];
                                             }
                                         }
                                     }
@@ -76,6 +77,8 @@
                                     NSLog(@"Error: %@", error);
                                 }
      ];
+    
+    return photoItems;
 }
 
 -(BOOL) isValidPhoto:(ALAsset *)photo {

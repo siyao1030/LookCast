@@ -94,13 +94,7 @@
 + (NSMutableArray *)addWeatherDataToPhotoItems
 {
     PhotoParserViewController *vc = [[PhotoParserViewController alloc] init];
-    NSMutableArray *photoItems = [vc getPhotos];
-    
-    for (PhotoItem *photoItem in photoItems) {
-        NSMutableDictionary *weather = [self weatherForLocation:photoItem.location date:photoItem.date];
-        [photoItem setHigh:weather[@"maxtempi"] andLow:weather[@"mintempi"] andRain:weather[@"rain"]];
-    }
-    
-    return photoItems;
+    NSMutableArray *photos = [vc getPhotos];
+    return photos;
 }
 @end

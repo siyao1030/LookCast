@@ -15,8 +15,7 @@
     @property float latitude;
     @property float longitude;
 
-- (NSMutableDictionary *) currentWeather;
-- (NSMutableDictionary *) weatherAtLatitude:(float)latitude longitude:(float)longitude;
-+ (NSDictionary *)updateWeatherData
++ (NSMutableDictionary *)weatherForLocation:(CLLocation *)location date:(NSDate *)date;
++ (NSDictionary *)updateWeatherData;
 + (NSMutableArray *)addWeatherDataToPhotoItems;
 @end

@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "PhotoItem.h"
+#import "Weather.h"
 
 @interface PhotoParserViewController : UIViewController
 
 @property ALAssetsLibrary *library;
 @property NSMutableArray *photoItems;
--(void) getPhotos;
+-(NSMutableArray *) getPhotos;
 @end

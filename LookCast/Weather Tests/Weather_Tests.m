@@ -27,14 +27,14 @@
     [super tearDown];
 }
 
-- (void)testExample
-{
-    [Weather updateWeatherData];
-}
-
-//- (void)testAdd
+//- (void)testExample
 //{
-//    [Weather addWeatherDataToPhotoItems];
+//    [Weather updateWeatherData];
 //}
+
+- (void)testAdd
+{
+    [Weather addWeatherDataToPhotoItems];
+}
 
 @end
