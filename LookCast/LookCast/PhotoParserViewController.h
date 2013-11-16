@@ -13,5 +13,6 @@
 
 @property ALAssetsLibrary *library;
 @property NSDictionary *photosMetadata;
+@property UIImageView *photoView; //
 
 @end

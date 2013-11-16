@@ -23,6 +23,7 @@
 		F0519EE21837315F0096E05E /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0519EE11837315F0096E05E /* AssetsLibrary.framework */; };
 		F0519EE8183734970096E05E /* PhotoParserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0519EE7183734970096E05E /* PhotoParserViewController.m */; };
 		F0519EEA183736A20096E05E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0519EE9183736A20096E05E /* CoreLocation.framework */; };
+		F0519EEC18373C2C0096E05E /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0519EEB18373C2C0096E05E /* CoreImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		F0519EE6183734970096E05E /* PhotoParserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoParserViewController.h; sourceTree = "<group>"; };
 		F0519EE7183734970096E05E /* PhotoParserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoParserViewController.m; sourceTree = "<group>"; };
 		F0519EE9183736A20096E05E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F0519EEB18373C2C0096E05E /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0519EEC18373C2C0096E05E /* CoreImage.framework in Frameworks */,
 				F0519EEA183736A20096E05E /* CoreLocation.framework in Frameworks */,
 				F0519EE21837315F0096E05E /* AssetsLibrary.framework in Frameworks */,
 				D1F2F0471837281800ADC893 /* CoreGraphics.framework in Frameworks */,
@@ -106,6 +109,7 @@
 		D1F2F0431837281800ADC893 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F0519EEB18373C2C0096E05E /* CoreImage.framework */,
 				F0519EE9183736A20096E05E /* CoreLocation.framework */,
 				F0519EE11837315F0096E05E /* AssetsLibrary.framework */,
 				D1F2F0441837281800ADC893 /* Foundation.framework */,
