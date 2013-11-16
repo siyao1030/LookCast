@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		203BC89018375CC200B55D48 /* history.json in Resources */ = {isa = PBXBuildFile; fileRef = 203BC88F18375CC200B55D48 /* history.json */; };
+		203BC8AE1837669600B55D48 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F2F0621837281800ADC893 /* XCTest.framework */; };
+		203BC8AF1837669600B55D48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F2F0441837281800ADC893 /* Foundation.framework */; };
+		203BC8B01837669600B55D48 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F2F0481837281800ADC893 /* UIKit.framework */; };
+		203BC8B61837669600B55D48 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 203BC8B41837669600B55D48 /* InfoPlist.strings */; };
+		203BC8B81837669600B55D48 /* Weather_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 203BC8B71837669600B55D48 /* Weather_Tests.m */; };
 		20582FEF1837351C00970942 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 20582FEE1837351C00970942 /* Weather.m */; };
 		20583020183745EB00970942 /* conditions.json in Resources */ = {isa = PBXBuildFile; fileRef = 2058301F183745EB00970942 /* conditions.json */; };
+		205830241837513300970942 /* TestWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 205830221837513300970942 /* TestWeatherViewController.m */; };
+		205830251837513300970942 /* TestWeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 205830231837513300970942 /* TestWeatherViewController.xib */; };
 		D1F2F0451837281800ADC893 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F2F0441837281800ADC893 /* Foundation.framework */; };
 		D1F2F0471837281800ADC893 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F2F0461837281800ADC893 /* CoreGraphics.framework */; };
 		D1F2F0491837281800ADC893 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F2F0481837281800ADC893 /* UIKit.framework */; };
@@ -20,10 +28,29 @@
 		D1F2F05C1837281800ADC893 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1F2F05B1837281800ADC893 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		203BC8BA1837669600B55D48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1F2F0391837281800ADC893 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1F2F0401837281800ADC893;
+			remoteInfo = LookCast;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		203BC88F18375CC200B55D48 /* history.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = history.json; path = ../history.json; sourceTree = "<group>"; };
+		203BC8AD1837669600B55D48 /* Weather Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Weather Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		203BC8B31837669600B55D48 /* Weather Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Weather Tests-Info.plist"; sourceTree = "<group>"; };
+		203BC8B51837669600B55D48 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		203BC8B71837669600B55D48 /* Weather_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Weather_Tests.m; sourceTree = "<group>"; };
+		203BC8B91837669600B55D48 /* Weather Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Weather Tests-Prefix.pch"; sourceTree = "<group>"; };
 		20582FED1837351C00970942 /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
 		20582FEE1837351C00970942 /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
 		2058301F183745EB00970942 /* conditions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = conditions.json; sourceTree = "<group>"; };
+		205830211837513300970942 /* TestWeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestWeatherViewController.h; path = ../TestWeatherViewController.h; sourceTree = "<group>"; };
+		205830221837513300970942 /* TestWeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestWeatherViewController.m; path = ../TestWeatherViewController.m; sourceTree = "<group>"; };
+		205830231837513300970942 /* TestWeatherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TestWeatherViewController.xib; path = ../TestWeatherViewController.xib; sourceTree = "<group>"; };
 		D1F2F0411837281800ADC893 /* LookCast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LookCast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1F2F0441837281800ADC893 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D1F2F0461837281800ADC893 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -41,6 +68,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		203BC8AA1837669600B55D48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				203BC8AE1837669600B55D48 /* XCTest.framework in Frameworks */,
+				203BC8B01837669600B55D48 /* UIKit.framework in Frameworks */,
+				203BC8AF1837669600B55D48 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D1F2F03E1837281800ADC893 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -55,9 +92,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		203BC8B11837669600B55D48 /* Weather Tests */ = {
+			isa = PBXGroup;
+			children = (
+				203BC8B71837669600B55D48 /* Weather_Tests.m */,
+				203BC8B21837669600B55D48 /* Supporting Files */,
+			);
+			path = "Weather Tests";
+			sourceTree = "<group>";
+		};
+		203BC8B21837669600B55D48 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				203BC8B31837669600B55D48 /* Weather Tests-Info.plist */,
+				203BC8B41837669600B55D48 /* InfoPlist.strings */,
+				203BC8B91837669600B55D48 /* Weather Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		2058301E183745D800970942 /* Weather API Example Outputs */ = {
 			isa = PBXGroup;
 			children = (
+				203BC88F18375CC200B55D48 /* history.json */,
 				2058301F183745EB00970942 /* conditions.json */,
 			);
 			name = "Weather API Example Outputs";
@@ -67,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				D1F2F04C1837281800ADC893 /* LookCast */,
+				203BC8B11837669600B55D48 /* Weather Tests */,
 				D1F2F0431837281800ADC893 /* Frameworks */,
 				D1F2F0421837281800ADC893 /* Products */,
 			);
@@ -76,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				D1F2F0411837281800ADC893 /* LookCast.app */,
+				203BC8AD1837669600B55D48 /* Weather Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +154,9 @@
 		D1F2F04C1837281800ADC893 /* LookCast */ = {
 			isa = PBXGroup;
 			children = (
+				205830211837513300970942 /* TestWeatherViewController.h */,
+				205830221837513300970942 /* TestWeatherViewController.m */,
+				205830231837513300970942 /* TestWeatherViewController.xib */,
 				D1F2F0551837281800ADC893 /* AppDelegate.h */,
 				D1F2F0561837281800ADC893 /* AppDelegate.m */,
 				20582FED1837351C00970942 /* Weather.h */,
@@ -121,6 +183,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		203BC8AC1837669600B55D48 /* Weather Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 203BC8BC1837669600B55D48 /* Build configuration list for PBXNativeTarget "Weather Tests" */;
+			buildPhases = (
+				203BC8A91837669600B55D48 /* Sources */,
+				203BC8AA1837669600B55D48 /* Frameworks */,
+				203BC8AB1837669600B55D48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				203BC8BB1837669600B55D48 /* PBXTargetDependency */,
+			);
+			name = "Weather Tests";
+			productName = "Weather Tests";
+			productReference = 203BC8AD1837669600B55D48 /* Weather Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		D1F2F0401837281800ADC893 /* LookCast */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1F2F0731837281800ADC893 /* Build configuration list for PBXNativeTarget "LookCast" */;
@@ -146,6 +226,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Siyao Xie";
+				TargetAttributes = {
+					203BC8AC1837669600B55D48 = {
+						TestTargetID = D1F2F0401837281800ADC893;
+					};
+				};
 			};
 			buildConfigurationList = D1F2F03C1837281800ADC893 /* Build configuration list for PBXProject "LookCast" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -160,16 +245,27 @@
 			projectRoot = "";
 			targets = (
 				D1F2F0401837281800ADC893 /* LookCast */,
+				203BC8AC1837669600B55D48 /* Weather Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		203BC8AB1837669600B55D48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				203BC8B61837669600B55D48 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D1F2F03F1837281800ADC893 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D1F2F0511837281800ADC893 /* InfoPlist.strings in Resources */,
+				205830251837513300970942 /* TestWeatherViewController.xib in Resources */,
+				203BC89018375CC200B55D48 /* history.json in Resources */,
 				D1F2F05C1837281800ADC893 /* Images.xcassets in Resources */,
 				20583020183745EB00970942 /* conditions.json in Resources */,
 			);
@@ -178,6 +274,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		203BC8A91837669600B55D48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				203BC8B81837669600B55D48 /* Weather_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D1F2F03D1837281800ADC893 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -186,12 +290,29 @@
 				D1F2F0571837281800ADC893 /* AppDelegate.m in Sources */,
 				D1F2F0531837281800ADC893 /* main.m in Sources */,
 				D1F2F05A1837281800ADC893 /* LookCast.xcdatamodeld in Sources */,
+				205830241837513300970942 /* TestWeatherViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		203BC8BB1837669600B55D48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1F2F0401837281800ADC893 /* LookCast */;
+			targetProxy = 203BC8BA1837669600B55D48 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		203BC8B41837669600B55D48 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				203BC8B51837669600B55D48 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		D1F2F04F1837281800ADC893 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -203,6 +324,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		203BC8BD1837669600B55D48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LookCast.app/LookCast";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Weather Tests/Weather Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Weather Tests/Weather Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		203BC8BE1837669600B55D48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LookCast.app/LookCast";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Weather Tests/Weather Tests-Prefix.pch";
+				INFOPLIST_FILE = "Weather Tests/Weather Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 		D1F2F0711837281800ADC893 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -304,6 +467,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		203BC8BC1837669600B55D48 /* Build configuration list for PBXNativeTarget "Weather Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				203BC8BD1837669600B55D48 /* Debug */,
+				203BC8BE1837669600B55D48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		D1F2F03C1837281800ADC893 /* Build configuration list for PBXProject "LookCast" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -8,25 +8,52 @@
 
 #import "Weather.h"
 
-@implementation Weather
+@implementation Weather {
+    CLLocationManager *locationManager;
+}
+
+- (id) init
+{
+    return self;
+}
+
++ (NSMutableDictionary *)weatherForLocation:(CLLocation *)location date:(NSDate *)date
+{
+    float latitude = location.coordinate.latitude;
+    float longitude = location.coordinate.longitude;
+    NSString *urlString = [NSString stringWithFormat:@"http://api.wunderground.com/api/b02d00370341149d/history_20060405/q/%3.4f,%3.4f.json", latitude, longitude];
+    
+    DLog(@"%@", urlString);
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlString]];
+    NSError *error;
+    NSURLResponse *response = nil;
+    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSDictionary *result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+    
+    NSMutableDictionary *weather = [NSMutableDictionary dictionary];
+    NSMutableDictionary *summary = result[@"history"][@"dailysummary"][0];
+    weather[@"mintempi"] = summary[@"mintempi"];
+    weather[@"maxtempi"] = summary[@"maxtempi"];
+    weather[@"rain"] = [NSNumber numberWithInt: [summary[@"rain"] integerValue]];
+    return weather;
+}
 
 // Current Weather in current location
-+ (NSMutableDictionary *) currentWeather
++ (NSMutableDictionary *)weatherForLocation:(CLLocation *)location
 {
-    //NSString *zipCode = @"91711";
-    NSString *requestURL = @"http://api.wunderground.com/api/b02d00370341149d/conditions/q/CA/San_Francisco.json";
+    float latitude = location.coordinate.latitude;
+    float longitude = location.coordinate.longitude;
+    
+    NSString *requestURL = [NSString stringWithFormat:@"http://api.wunderground.com/api/b02d00370341149d/conditions/q/%3.4f,%3.4f.json", latitude, longitude];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:requestURL]];
-    [request setHTTPMethod:@"GET"];
-    
     NSError *requestError;
     NSURLResponse *urlResponse = nil;
-    
     NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&requestError];
     NSDictionary *result = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:nil];
     
     NSString *temp_f = result[@"current_observation"][@"temp_f"];
-    NSString *relative_humidity = result[@"current_observation"][@"relative_humidity"];
     //Precipitation in inches
     NSString *precipitation = result[@"current_observation"][@"precip_today_in"];
     //Icon name, somethinglike partlycloudy
@@ -34,38 +61,24 @@
     
     NSMutableDictionary *weather = [NSMutableDictionary dictionary];
     weather[@"temp_f"] = temp_f;
-    weather[@"relative_humidity"] = relative_humidity;
-    weather[@"precipitation"] = precipitation;
+    if (precipitation > 0) {
+        weather[@"precipitation"] = [NSNumber numberWithInt: 1];
+    } else {
+        weather[@"precipitation"] = [NSNumber numberWithInt: 0];
+    }
     weather[@"icon"] = icon;
     
     return weather;
 }
 
-+ (NSMutableDictionary *) weatherAtLatitude:(float)latitude longitude:(float)longitude
++ (void)updateWeatherData
 {
-
+    float temp_lat = 34.1223;
+    float temp_long = -117.7143;
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:temp_lat longitude:temp_long];
     
-    //
-    NSString *requestURLString = @"http://api.wunderground.com/api/b02d00370341149d/conditions/q/34.1223,-117.7143.json";
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:requestURLString]];
-    NSError *error;
-    NSURLResponse *response = nil;
-    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-    NSDictionary *result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-    
-    NSDictionary *current_observation = result[@"current_observation"];
-    NSString *city = current_observation[@"display_location"][@"city"];
-    NSString *state = current_observation[@"display_location"][@"state"];
-    NSString *temp_f = current_observation[@"temp_f"];
-    NSString *precip_today_in = current_observation[@"precip_today_in"];
-    
-    NSMutableDictionary *weather = [NSMutableDictionary dictionary];
-    weather[@"city"] = city;
-    weather[@"state"] = state;
-    weather[@"temp_f"] = temp_f;
-    weather[@"precip_today_in"] = precip_today_in;
-    
-    return weather;
+    NSDate *date = [NSDate date];
+    NSDictionary *weather = [self weatherForLocation:location date:date];
 }
 
 @end

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5FC50B68-6DC6-40D3-857E-A9A4A72885DA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>LookCast</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>82643CB3-EDE9-4769-AF6F-9CE21605B184</key>
+		<string>https://github.com/siyao1030/LookCast</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>LookCast/LookCast.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>82643CB3-EDE9-4769-AF6F-9CE21605B184</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/siyao1030/LookCast</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>82643CB3-EDE9-4769-AF6F-9CE21605B184</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>82643CB3-EDE9-4769-AF6F-9CE21605B184</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LookCast</string>
+		</dict>
+	</array>
+</dict>
+</plist>
