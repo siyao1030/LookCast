@@ -16,9 +16,9 @@
 @property NSDate *date;
 @property NSString *high;
 @property NSString *low;
-@property NSInteger *rain;
+@property NSNumber *rain;
 
 -(id)initWithUrl:(NSURL *)url andLocation:(CLLocation *)location andDate:(NSDate *)date;
--(void)setHigh:(NSString *)high andLow:(NSString *)low andRain:(NSInteger *)rain;
+-(void)setHigh:(NSString *)high andLow:(NSString *)low andRain:(NSNumber *)rain;
 
 @end

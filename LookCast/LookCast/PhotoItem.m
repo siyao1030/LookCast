@@ -19,7 +19,7 @@
     return self;
 }
 
--(void)setHigh:(NSString *)high andLow:(NSString *)low andRain:(NSInteger *)rain {
+-(void)setHigh:(NSString *)high andLow:(NSString *)low andRain:(NSNumber *)rain {
     self.high = high;
     self.low = low;
     self.rain = rain;

@@ -73,12 +73,24 @@
 
 + (void)updateWeatherData
 {
+    //Claremont
     float temp_lat = 34.1223;
     float temp_long = -117.7143;
     CLLocation *location = [[CLLocation alloc] initWithLatitude:temp_lat longitude:temp_long];
-    
     NSDate *date = [NSDate date];
     NSDictionary *weather = [self weatherForLocation:location date:date];
 }
 
++ (NSMutableArray *)addWeatherDataToPhotoItems
+{
+    PhotoParserViewController *vc = [[PhotoParserViewController alloc] init];
+    [vc getPhotos];
+    
+    for (PhotoItem *photoItem in vc.photoItems) {
+        NSMutableDictionary *weather = [self weatherForLocation:photoItem.location date:photoItem.date];
+        [photoItem setHigh:weather[@"maxtempi"] andLow:weather[@"mintempi"] andRain:weather[@"rain"]];
+    }
+    
+    return vc.photoItems;
+}
 @end

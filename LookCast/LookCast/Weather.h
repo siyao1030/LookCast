@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
+#import "PhotoItem.h"
+#import "PhotoParserViewController.h"
 
 @interface Weather : NSObject <CLLocationManagerDelegate>
     @property float latitude;
@@ -16,5 +18,5 @@
 - (NSMutableDictionary *) currentWeather;
 - (NSMutableDictionary *) weatherAtLatitude:(float)latitude longitude:(float)longitude;
 + (void)updateWeatherData;
-
++ (NSMutableArray *)addWeatherDataToPhotoItems;
 @end
