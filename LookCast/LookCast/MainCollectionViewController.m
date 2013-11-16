@@ -30,7 +30,10 @@
     return self;
 }
 
--(void)loadImage(NSMutableArray *)
+-(void)loadImage:(NSMutableArray *) dict
+{
+    
+}
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.images.count;
