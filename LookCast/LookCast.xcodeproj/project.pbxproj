@@ -20,8 +20,7 @@
 		D1F2F0641837281800ADC893 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F2F0441837281800ADC893 /* Foundation.framework */; };
 		D1F2F0651837281800ADC893 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F2F0481837281800ADC893 /* UIKit.framework */; };
 		D1F2F0661837281800ADC893 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F2F04A1837281800ADC893 /* CoreData.framework */; };
-		D1F2F06E1837281800ADC893 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D1F2F06C1837281800ADC893 /* InfoPlist.strings */; };
-		D1F2F0701837281800ADC893 /* LookCastTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F2F06F1837281800ADC893 /* LookCastTests.m */; };
+		F0519ECC18372F420096E05E /* libiphone-exif.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0519ECB18372F420096E05E /* libiphone-exif.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +49,17 @@
 		D1F2F05B1837281800ADC893 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D1F2F0611837281800ADC893 /* LookCastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LookCastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1F2F0621837281800ADC893 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		D1F2F06B1837281800ADC893 /* LookCastTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LookCastTests-Info.plist"; sourceTree = "<group>"; };
-		D1F2F06D1837281800ADC893 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D1F2F06F1837281800ADC893 /* LookCastTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LookCastTests.m; sourceTree = "<group>"; };
+		F0519ECB18372F420096E05E /* libiphone-exif.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libiphone-exif.a"; sourceTree = "<group>"; };
+		F0519ECE18372F520096E05E /* EXF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXF.h; sourceTree = "<group>"; };
+		F0519ECF18372F520096E05E /* EXFConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXFConstants.h; sourceTree = "<group>"; };
+		F0519ED018372F520096E05E /* EXFGPS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXFGPS.h; sourceTree = "<group>"; };
+		F0519ED118372F520096E05E /* EXFHandlers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXFHandlers.h; sourceTree = "<group>"; };
+		F0519ED218372F520096E05E /* EXFJFIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXFJFIF.h; sourceTree = "<group>"; };
+		F0519ED318372F520096E05E /* EXFJpeg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXFJpeg.h; sourceTree = "<group>"; };
+		F0519ED418372F520096E05E /* EXFLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXFLogging.h; sourceTree = "<group>"; };
+		F0519ED518372F520096E05E /* EXFMetaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXFMetaData.h; sourceTree = "<group>"; };
+		F0519ED618372F520096E05E /* EXFTagDefinitionHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXFTagDefinitionHolder.h; sourceTree = "<group>"; };
+		F0519ED718372F520096E05E /* EXFUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXFUtils.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0519ECC18372F420096E05E /* libiphone-exif.a in Frameworks */,
 				D1F2F0471837281800ADC893 /* CoreGraphics.framework in Frameworks */,
 				D1F2F04B1837281800ADC893 /* CoreData.framework in Frameworks */,
 				D1F2F0491837281800ADC893 /* UIKit.framework in Frameworks */,
@@ -85,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				D1F2F04C1837281800ADC893 /* LookCast */,
-				D1F2F0691837281800ADC893 /* LookCastTests */,
 				D1F2F0431837281800ADC893 /* Frameworks */,
 				D1F2F0421837281800ADC893 /* Products */,
 			);
@@ -103,6 +110,7 @@
 		D1F2F0431837281800ADC893 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F0519ECB18372F420096E05E /* libiphone-exif.a */,
 				D1F2F0441837281800ADC893 /* Foundation.framework */,
 				D1F2F0461837281800ADC893 /* CoreGraphics.framework */,
 				D1F2F0481837281800ADC893 /* UIKit.framework */,
@@ -115,6 +123,7 @@
 		D1F2F04C1837281800ADC893 /* LookCast */ = {
 			isa = PBXGroup;
 			children = (
+				F0519ECD18372F520096E05E /* include */,
 				D1F2F0551837281800ADC893 /* AppDelegate.h */,
 				D1F2F0561837281800ADC893 /* AppDelegate.m */,
 				D1F2F05B1837281800ADC893 /* Images.xcassets */,
@@ -135,22 +144,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D1F2F0691837281800ADC893 /* LookCastTests */ = {
+		F0519ECD18372F520096E05E /* include */ = {
 			isa = PBXGroup;
 			children = (
-				D1F2F06F1837281800ADC893 /* LookCastTests.m */,
-				D1F2F06A1837281800ADC893 /* Supporting Files */,
+				F0519ECE18372F520096E05E /* EXF.h */,
+				F0519ECF18372F520096E05E /* EXFConstants.h */,
+				F0519ED018372F520096E05E /* EXFGPS.h */,
+				F0519ED118372F520096E05E /* EXFHandlers.h */,
+				F0519ED218372F520096E05E /* EXFJFIF.h */,
+				F0519ED318372F520096E05E /* EXFJpeg.h */,
+				F0519ED418372F520096E05E /* EXFLogging.h */,
+				F0519ED518372F520096E05E /* EXFMetaData.h */,
+				F0519ED618372F520096E05E /* EXFTagDefinitionHolder.h */,
+				F0519ED718372F520096E05E /* EXFUtils.h */,
 			);
-			path = LookCastTests;
-			sourceTree = "<group>";
-		};
-		D1F2F06A1837281800ADC893 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D1F2F06B1837281800ADC893 /* LookCastTests-Info.plist */,
-				D1F2F06C1837281800ADC893 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
+			path = include;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,7 +245,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1F2F06E1837281800ADC893 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +265,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1F2F0701837281800ADC893 /* LookCastTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,14 +283,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				D1F2F0501837281800ADC893 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		D1F2F06C1837281800ADC893 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D1F2F06D1837281800ADC893 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -372,6 +370,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LookCast/LookCast-Prefix.pch";
 				INFOPLIST_FILE = "LookCast/LookCast-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/sumaiyahashmi/Desktop/csprojects/workspace/iOS/LookCast/LookCast/iphone-exif-0-9.1/Release-iphoneos",
+					"/Users/sumaiyahashmi/Desktop/csprojects/workspace/iOS/LookCast/LookCast/iphone-exif-0-9.1/Release-simulator-iphonesimulator",
+					/Users/sumaiyahashmi/Desktop/csprojects/workspace/iOS/LookCast/LookCast,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -385,6 +389,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LookCast/LookCast-Prefix.pch";
 				INFOPLIST_FILE = "LookCast/LookCast-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/sumaiyahashmi/Desktop/csprojects/workspace/iOS/LookCast/LookCast/iphone-exif-0-9.1/Release-iphoneos",
+					"/Users/sumaiyahashmi/Desktop/csprojects/workspace/iOS/LookCast/LookCast/iphone-exif-0-9.1/Release-simulator-iphonesimulator",
+					/Users/sumaiyahashmi/Desktop/csprojects/workspace/iOS/LookCast/LookCast,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -451,6 +461,7 @@
 				D1F2F0751837281800ADC893 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D1F2F0761837281800ADC893 /* Build configuration list for PBXNativeTarget "LookCastTests" */ = {
 			isa = XCConfigurationList;
@@ -459,6 +470,7 @@
 				D1F2F0781837281800ADC893 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
